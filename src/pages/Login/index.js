@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './login.css'
 
 import { MdEmail, MdLock } from "react-icons/md"
-import { HiEye, HiEyeOff } from "react-icons/hi"
+import { HiEye, HiEyeOff } from "react-icons/hi" //MOSTRA OU ESCORDE A SENHA
 
 function Login() {
    const [email, setEmail] = useState("")
@@ -17,10 +17,7 @@ function Login() {
    return (
       <div className="login">
          <div className="login-logo">
-            <img
-               src="https://anzuns.org/wp-content/uploads/2018/02/admin_login.png"
-               alt="MdLockLogin App"
-            />
+            /**AQUI PODE COLOCAR UMA IMAGEM */
          </div>
 
          <div className="login-right">
@@ -43,7 +40,7 @@ function Login() {
                   type={show ? "text" : "password"}
                   value={password}
                   onChange={e => setPassword(e.target.value)}
-               />
+               /> 
                <div className="login-eye">
                   {show ? (
                      <HiEye
@@ -51,11 +48,11 @@ function Login() {
                         onClick={handleClick}
                      />
                   ) : (
-                        <HiEyeOff
-                           size={20}
-                           onClick={handleClick}
-                        />
-                     )}
+                     <HiEyeOff
+                        size={20}
+                        onClick={handleClick}
+                     />
+                  )}
                </div>
             </div>
 
